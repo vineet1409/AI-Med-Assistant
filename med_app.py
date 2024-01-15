@@ -32,7 +32,7 @@ def load_models():
     nltk.download('punkt')
     model = AutoModel.from_pretrained('jinaai/jina-embeddings-v2-base-en', trust_remote_code=True)
     llm = ChatGoogleGenerativeAI(model="gemini-pro",
-                             temperature=0.8, google_api_key="AIzaSyDatwH0wK7Iro-7J28ocINW5bbCzO-qhTk")
+                             temperature=0.8, google_api_key="your-api-key")
     
     df = pd.read_csv('med_assistant_db.csv')
     sentences = df['text'].tolist()
